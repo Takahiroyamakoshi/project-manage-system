@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             RoleSeeder::class,
-            KeyWordGroupeSeeder::class,
+            KeyWordGroupSeeder::class,
         ]);
     }
 }

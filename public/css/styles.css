@@ -1,0 +1,33 @@
+.card {
+    border: none;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+}
+
+.card-header {
+    background-color: #4F4F4F;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+}
+
+.card-body {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.alert-success {
+    background-color: #c3e6cb;
+    color: #155724;
+    border-color: #b1dfbb;
+}
+
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}

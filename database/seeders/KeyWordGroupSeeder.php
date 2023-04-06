@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\KeyWordGroupe;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\KeyWordGroup;
 use Illuminate\Database\Seeder;
 
-class KeyWordGroupeSeeder extends Seeder
+class KeyWordGroupSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,16 +14,16 @@ class KeyWordGroupeSeeder extends Seeder
      */
     public function run()
     {
-        KeyWordGroupe::create([
+        KeyWordGroup::create([
             'name' => '言語',
         ]);
-        KeyWordGroupe::create([
+        KeyWordGroup::create([
             'name' => 'フレームワーク',
         ]);
-        KeyWordGroupe::create([
+        KeyWordGroup::create([
             'name' => 'ツール',
         ]);
-        KeyWordGroupe::create([
+        KeyWordGroup::create([
             'name' => 'DB',
         ]);
     }
