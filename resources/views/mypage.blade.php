@@ -3,27 +3,32 @@
 @extends('header')
 
 @section('content')
-<form method="POST" action="{{ route('profile.update') }}">
+<form method="POST" action="{{ route('user.update') }}">
     @csrf
     <div class="container">
-        <h2>プロフィール</h2>
-        <div class="profile-section">
-            <div class="form-group">
-                <label for="username">ユーザー名:</label>
-                <input type="text" class="form-control" id="username" name="username" value="{{ $user->username }}" readonly>
+        <div class="row justify-content-start">
+            <div class="col-md-6">
+                <h2>プロフィール</h2>
+                <div class="profile-section">
+                    <div class="form-group">
+                        <label for="username">ユーザー名:</label>
+                        <input type="text" class="form-control" id="username" name="username" value="{{ $user->name }}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス:</label>
+                        <input type="email" class="form-control" id="email" name="email" value="{{ $user->email }}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">パスワード:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="新しいパスワードを入力してください">
+                    </div>
+                    <button type="submit" class="btn btn-primary">パスワード変更</button>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email">メールアドレス:</label>
-                <input type="email" class="form-control" id="email" name="email" value="{{ $user->email }}" readonly>
-            </div>
-            <div class="form-group">
-                <label for="password">パスワード:</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="新しいパスワードを入力してください">
-            </div>
-            <button type="submit" class="btn btn-primary">パスワード変更</button>
         </div>
     </div>
 </form>
+
 
 {{--        <h2>プロジェクト案件一覧</h2>
         <table class="table">

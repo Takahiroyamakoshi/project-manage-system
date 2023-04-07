@@ -12,9 +12,11 @@ class UserController extends Controller
     public function index()
     {
         $user = Auth::user();
+
+        var_dump($user->name);
         return view('mypage', [
             'user' => $user,
-            'username' => $user->username,
+            'username' => $user->name,
             'email' => $user->email
         ]);
         // return view('user-info');

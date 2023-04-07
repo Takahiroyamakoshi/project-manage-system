@@ -29,7 +29,7 @@
 
                         {{ __('ログインしました！') }}
                         <br>
-                        <a href="{{ route('mypage') }}">マイページへ</a>
+                        <a href="{{ route('user.mypage') }}">マイページへ</a>
                     </div>
                 </div>
             </div>
