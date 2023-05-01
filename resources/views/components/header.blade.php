@@ -8,6 +8,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
+@section('navbar')
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -19,13 +20,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ホーム</a>
+                        <a class="nav-link" href="http://project-manage-system.com:81/user/mypage">MyPage</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">プロジェクト案件一覧</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">マイページ<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="http://project-manage-system.com:81/user/profile">プロフィール<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">ログアウト</a>
@@ -52,3 +53,4 @@
 </body>
 
 </html>
+@endsection

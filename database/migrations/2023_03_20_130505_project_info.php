@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('higher_company',150);
             $table->string('project_overview',250);
             $table->text('detail');
+            $table->text('environment');
+            $table->text('skill');
             $table->string('work_place',120);
             $table->text('remark');
         });

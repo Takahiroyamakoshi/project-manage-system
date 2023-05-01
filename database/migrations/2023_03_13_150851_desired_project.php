@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('desird_key_words', function (Blueprint $table) {
+        Schema::create('desired_projects', function (Blueprint $table) {
             $table->id();
-            $table->integer('desird_project_id');
-            $table->foreignId('key_word_id')->constrained('key_words');
-        });       
+            $table->foreignId('user_id')->constrained('users');
+            $table->string('commuting_limit');
+        });
     }
 
     /**
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('desird_key_words');
+        Schema::dropIfExists('desired_projects');
     }
 };

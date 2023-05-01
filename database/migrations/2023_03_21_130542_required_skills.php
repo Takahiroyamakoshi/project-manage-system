@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('project_info_id')->constrained('project_info');
             $table->foreignId('key_word_id')->constrained('key_words');
             $table->string('experience_years')->nullable();
-            $table->timestamp('remark')->nullable();
+            $table->string('remark')->nullable();
         });
     }
 
