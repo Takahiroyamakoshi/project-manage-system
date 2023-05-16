@@ -2,8 +2,9 @@
 
 @include ('components.header')
 @extends('components.header')
+
 <body>
-@yield('navbar')
+    @yield('navbar')
     <div class="container-fluid">
         <div class="title">
             <div class="content">
@@ -33,6 +34,9 @@
                         <div class="desired_working_style">
                             <h5>・勤務形態</h5>
                             <p>{{ $working_style }}</p>
+                        </div>
+                        <div>
+                            <a href="{{ route('user.desired_project_edit') }}" class="btn btn-primary btn-sm">希望条件編集</a>
                         </div>
                     </div>
                 </div>

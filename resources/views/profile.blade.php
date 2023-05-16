@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-@extends('header')
+@include ('components.header')
+@extends('components.header')
 
-@section('content')
 @if(session('success'))
 <div class="alert alert-success">{{ session('success') }}</div>
 @endif
+@yield('navbar')
 <form method="POST" action="{{ route('user.profile.update') }}">
     @csrf
     <div class="container">
@@ -43,4 +44,3 @@
 </footer>
 
 </html>
-@endsection

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Users\DesiredConditionController;
 use App\Http\Controllers\Users\MyPageController;
 use App\Http\Controllers\Users\ProfileController;
 use App\Http\Controllers\Users\ProjectController;
@@ -34,5 +35,8 @@ Route::post('/user/profile/update', [ProfileController::class, 'update'])->name(
 // Route::get('/user/projects/{id}', ProjectController::class, 'show')->name('projects.show');
 
 Route::get('/user/mypage', [MyPageController::class, 'index'])->name('user.mypage');
+
+Route::get('/user/desired-project-edit', [DesiredConditionController::class, 'show'])->name('user.desired_project_edit');
+Route::put('/user/desired-project-edit', [DesiredConditionController::class, 'show'])->name('user.desired_project_edit');
 
 Route::get('/user/projects/{id}', [ProjectController::class, 'show'])->name('user.project.show');

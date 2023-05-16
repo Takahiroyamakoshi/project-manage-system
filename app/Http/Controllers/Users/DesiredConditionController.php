@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers\Users;
 
-use App\Helpers\KeyWordCollection;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Http\Request;
 
-class MyPageController extends Controller
+class DesiredConditionController extends Controller
 {
     const LANGUAGE_ID = 1;
     const FRAMEWORK_ID = 2;
     const TOOL_ID = 3;
     const WORKING_STYLE_ID = 4;
 
-    public function index()
+    public function show()
     {
+
         // ユーザーIDに紐づく希望条件を取得
         $user = User::with('desiredProject.desiredKeyWord.KeyWord')
             ->find(auth()->id());
@@ -47,20 +48,16 @@ class MyPageController extends Controller
             ->pluck('KeyWord.name')
             ->join(',');
 
-        // ユーザーIDに紐づく案件情報を取得
-        $joinableProjects = User::with('attendInfo.projectInfo')
-            ->find(auth()->id())->attendInfo;
-
-        foreach ($joinableProjects as $joinableProject) {
-            $projects[] = $joinableProject->projectInfo->toArray();
-        }
-
-        return view('mypage', [
+        return view('edit_desired_condition', [
+            'id' => $user->id,
             'language' => $languageNames,
             'framework' => $frameworkNames,
             'tool' => $toolNames,
             'working_style' => $workingStyles,
-            'projects' => $projects,
         ]);
+    }
+
+    public function edit()
+    {
     }
 }
