@@ -37,6 +37,6 @@ Route::post('/user/profile/update', [ProfileController::class, 'update'])->name(
 Route::get('/user/mypage', [MyPageController::class, 'index'])->name('user.mypage');
 
 Route::get('/user/desired-project-edit', [DesiredConditionController::class, 'show'])->name('user.desired_project_edit');
-Route::put('/user/desired-project-edit', [DesiredConditionController::class, 'show'])->name('user.desired_project_edit');
+Route::put('/user/desired-project-edit', [DesiredConditionController::class, 'update'])->name('user.desired_project_edit');
 
 Route::get('/user/projects/{id}', [ProjectController::class, 'show'])->name('user.project.show');
