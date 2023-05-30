@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\ProjectInfo;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ProjectInfoSeeder extends Seeder
 {

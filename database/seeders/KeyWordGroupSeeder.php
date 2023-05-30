@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\KeyWordGroup;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class KeyWordGroupSeeder extends Seeder
 {
